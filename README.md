@@ -27,9 +27,13 @@ Think of a website idea such as:
 Create a `.txt` file on your system and write your idea clearly in the following format:
 
 Website Title:
+
 Problem:
+
 Idea:
+
 Features:
+
 First Webpage Plan:
 
 Keep it simple — explain:
