@@ -1,0 +1,9 @@
+Website TITLE --> D_ADDICTION_APP
+
+Problem:The problem of people getting addicted to things like instagram , yt shorts , games and many more things
+
+Idea: I am first going to learn about the person in the first week . The person needs to write down about his day and activites which deeply effected his day and the built in Ai judging on his personanlity will show them the method which will be appropiate for dealing with his addiction . He will be doing this while selecting his adiction on working on the common symptons . 
+
+Features: Differeent plans , routines , interaction , motivation , Ai based sessions , improvement dashboard , 
+
+First Webpage Plan: It will have a motivation quote of the weak  , your dashboard of things you been doing and working upon .
