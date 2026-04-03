@@ -1,0 +1,12 @@
+Website Title: Medication Advisor
+
+Problem: Many people buy medicines from pharmacies, but they do not properly get advised on how frequently they should use/consume their medication. Sometimes they also get wrong information on how to use a particular tpy eof medication, which will lead to their conditions getting worse.
+
+
+Idea: The idea of this website is to use doctor verfified sources to advise people on how to use their medications. They will be advised on what medicine they can take and how frequently they should take it. The website will also have the contact numbers of willing doctors who are ready to advise the patients one on one. The website will have a sign in page separately for doctors and patients.
+
+
+Features: The first feature will be the sign in feature, separate for verified doctors and patients. The patients will be able to type in the medication and recieve information on how to use the medication from verified sources. The doctors can also upvote and downvote on the information. The contact numbers of willing doctors will also be added. A planner will also be added, such that the patient can follow the particular medication they chose using the planner so that they dont miss out on the timings. A chatbot can also be added to guide any confused users.
+
+
+First Webpage Plan: The first webpage will be the sign in page. After the sign in page the dashboard will be visible, with the planner taking about 1/4th of the page, some part of the webpage can contain ads for certain companies or hospitals. The rest contains the search bar, suggestions based on recent searches, and the AI chatbot button.
