@@ -1,0 +1,198 @@
+/* ---- GLOBAL ---- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+/* ---- TOP BAR ---- */
+.top {
+    background: #000;
+    color: white;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.top img {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.top h2 {
+    font-size: 18px;
+    margin: 0;
+    flex: 1;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+/* ---- NAV LINKS ---- */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: 0.2s ease;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+}
+
+
+/* ---------- LEFT FRAME (WHITE PANEL) ---------- */
+.left {
+  background: #ffffff;        /* white background */
+  color: #111;                /* dark text */
+  padding: 16px;
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+}
+
+.left h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #000;
+}
+
+.left a {
+  display: block;
+  color: #000;                /* black text */
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  margin: 10px 0;
+  transition: 0.2s ease;
+  font-weight: 700;
+  background: #fafafa;        /* slight grey tile */
+}
+
+.left a:hover {
+  background: #000;           /* hover turns black */
+  color: #fff;
+  border-color: #000;
+}
+
+
+
+/* ---- CONTENT WRAPPER ---- */
+.page {
+    padding: 20px;
+}
+
+/* ---- WHITE CARD ---- */
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e8e8e8;
+}
+
+/* ---- HERO BANNER ---- */
+.hero {
+    width: 100%;
+    height: 190px;
+    border-radius: 18px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
+/* ---- TABLE ---- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-top: 14px;
+}
+
+th {
+    background: black;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+tr:hover td {
+    background: #fafafa;
+}
+
+.bookimg {
+    height: 75px;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+}
+
+/* ---- PRICE BADGE ---- */
+.price {
+    font-weight: 800;
+    background: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 999px;
+    display: inline-block;
+}
+
+/* ---- FORMS ---- */
+form {
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #cfcfcf;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: black;
+}
+
+/* ---- BUTTONS ---- */
+input[type="submit"], button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: #222;
+}

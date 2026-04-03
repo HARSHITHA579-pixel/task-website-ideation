@@ -1,0 +1,8 @@
+Website title:
+Online Book Store
+Problem:
+Making a simple to use library website to keep track of books available in your college library.
+Idea:
+
+Features:
+Cart (showing the books you can borrow) , also a feature that shows the current books you have borrowed from your library.
