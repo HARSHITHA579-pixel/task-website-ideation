@@ -1,2 +1,21 @@
-A personal portfolio made using HTML and CSS.
-                                 Aritra Ghosh
+Website Title:
+Personal Portfolio Website
+
+Problem:
+Students and beginners often lack a professional online presence to showcase their skills, projects, and achievements in one place.
+
+Idea:
+Create a personal portfolio website using HTML and CSS to display my profile, skills, projects, and contact information in a clean and
+visually appealing way.
+
+Features:
+- Home section with introduction
+- About Me section
+- Skills showcase
+- Projects section with descriptions
+- Contact form or contact details
+- Responsive design for mobile and desktop
+
+First Webpage Plan:
+The first webpage will be the homepage. It will include a navigation bar, a brief introduction about me (Aritra Ghosh), a profile image,
+and links to other sections like About, Projects, and Contact. It will be simple, clean, and easy to navigate.
