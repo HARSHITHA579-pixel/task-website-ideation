@@ -1,0 +1,8 @@
+K.Virajitha
+24BEC0623
+
+My website idea is a food blogs and cooking recipe site. It will be of simple design and colors that are appealing, pop out and grab the attention of the viewers. Moreover ,the website is a user interface that allows the user to upload their own recipes and stories under their profile. The website enables one-on-one chats ,that allow the users to directly communicate, share photos and discuss with others through the website itself. 
+
+It will have a feature where you can list ingredients you have and it will search and show the food items you can make with what is available with you currently. The website also provides a translator feature that displays  the names of spices and ingredients in various regions of the world. For example ,when you type cumin seeds and select Tamil Nadu , it will show that cumin seeds are referred to as Seeragam. This makes the website very beginner friendly. Users can also enjoy advanced filters, that filter based on time taken ,ingredients used ,meal preps and food cravings. 
+
+The Key takeaway is that unlike other websites , recipes are simple with step-by-step instructions and visually appealing with popups . This removes the Website clutter that users face with overwhelming abundance of elements—text, images, ads that distract them from the primary purpose of a site. It includes personal tips or stories to connect with readers and boost shares.
