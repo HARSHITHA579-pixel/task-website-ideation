@@ -5,3 +5,13 @@ body{
     color: whitesmoke;
     background-color: black;
 }
+
+a{
+    color: aliceblue;
+}
+a:visited{
+    color: lightgray;
+}
+a:hover, a:active{
+    color: #eee;
+}
