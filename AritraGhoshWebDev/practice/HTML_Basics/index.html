@@ -10,94 +10,121 @@
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <header>
+        <h1>Hello World!</h1>
 
-    <hr>
+        <nav aria-label="primary-navigation">
+            <ul>
+                <li><a href="#learn-html">Learn HTML</a></li>
+                <li><a href="#vacation">Vacation</a></li>
+                <li><a href="#must-do">Must Do</a></li>
+                <li><a href="#don-ts">Don'ts</a></li>
 
-    <nav>
-        <ul>
-            <li><a href="#learn-html">Learn HTML</a></li>
-            <li><a href="#vacation">Vacation</a></li>
-            <li><a href="#must-do">Must Do</a></li>
-            <li><a href="#don-ts">Don'ts</a></li>
-
-        </ul>
-    </nav>
-
-    <hr>
-
-    <section id="learn-html">
-        <h2>Let's learn HTML</h2>
-        <p>This is my first webpage</p>
-        <h3>Part of RoboVITics</h3>
-        <p>Junior Core -  <em>Web developer</em>
-            <br>.....I'm lea&nbsp;rning <abbr title="Hypertext Markup Language"><a href="https://www.w3schools.com/Html/" target="_blank">HTML</a></abbr>, <abbr title="Cascading Stylesheets"><a href="https://www.w3schools.com/css/" target="_blank">CSS</a></abbr> and <abbr title="Java Script"><a href="https://www.w3schools.com/js/" target="_blank">JS</a></abbr>
-            <br>.....I know some of these stuff already
-        </p>
-    </section>
-    <!--&nbsp; - html entity for non-breaking space-->
-
-    <hr>
-
-    <section id="vacation">
-        <h3>What am I going to do during my Vacation?</h3>
-        <ol>
-            <li>Outing with friends.</li>
-            <li><strong>Watching movies</strong>, animes</li>
-            <li>Playing games</li>
-            <li>Reading books</li>
-            <li>Pretty cooked everywhere.</li>
-        </ol>
-    </section>
-
-    <hr>
-
-    <section id="must-do">
-        <h3>What I must do during vacation?</h3>
-        <ul>
-            <li>DO WEB DEV</li>
-            <li>Go to Meghalaya
-                <p>
-                    <address>Jail Road, Police Bazar,<br>Shillong, Meghalaya,<br> India 793001</address>
-                </p>
-            </li>
-        </ul>
-    </section>
+            </ul>
+        </nav>
+    </header>
     
     <hr>
 
-    <section id="don-ts">
-        <h3>What I don't want to do</h3>
-        <!--description list-->
-        <dl>
-            <!--description term-->
-            <dt>Waste Time</dt>
-            <!--description details-->
-            <dd>Not spending time on unproductive activities.</dd>
-            <dd>Not procrastinating on important tasks.</dd>
-        </dl>
-        <!-- World Wide Web Consortium: For validating markups-->
-        <!--
-        References: 
-        1. Absolute refernces
-        2. Relative references
-        3. Internal references (or shortcuts)
-        -->
-    </section>
+    <main>
+        <article id="learn-html">
+            <h2>Let's learn HTML</h2>
+            <p>This is my first webpage</p>
+            <section>
+                <h3>HTML5</h3>
+                <img src="/img/HTML5_Logo_512.png" alt="HTML Logo" title="I'm learning HTML5" width="100" height="100">
+                <figure>
+                    <figcaption>Example of HTML5 code</figcaption>
+                    <p>
+                        <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+                    </p>
+                </figure>
+            </section>
+            <section>
+                <h3>Part of RoboVITics</h3>
+                <p>Junior Core -  <em>Web developer</em>
+                    <br>.....I'm lea&nbsp;rning <abbr title="Hypertext Markup Language"><a href="https://www.w3schools.com/Html/" target="_blank">HTML</a></abbr>, <abbr title="Cascading Stylesheets"><a href="https://www.w3schools.com/css/" target="_blank">CSS</a></abbr> and <abbr title="Java Script"><a href="https://www.w3schools.com/js/" target="_blank">JS</a></abbr>
+                    <br>.....I know some of these stuff already
+                </p>
+            </section>
+            <aside>
+                <details>
+                    <summary>
+                        Guess the <mark>number of hours</mark> I code per day
+                    </summary>
+                    <p>I start at <time datetime="12:00">12 pm</time> and code for <time datetime="PT3H">3 hours</time> every day</p>
+                </details>
+            </aside>
+        </article>
+        <!--&nbsp; - html entity for non-breaking space-->
+
+        <hr>
+
+        <article id="vacation">
+            <section>
+                <h3>What am I going to do during my Vacation?</h3>
+                <ol>
+                    <li>Outing with friends.</li>
+                    <li><strong>Watching movies</strong>, animes</li>
+                    <li>Playing games</li>
+                    <li>Reading books</li>
+                    <li>Pretty cooked everywhere.</li>
+                </ol>
+            
+            </section>
+
+            <hr>
+
+            <section id="must-do">
+                <h3>What I must do during vacation?</h3>
+                <ul>
+                    <li>DO WEB DEV</li>
+                    <li>Go to Meghalaya
+                        <br>
+                        <figure>
+                            <img src="/img/chirayu-sharma-fNnpZSdqLoY-unsplash.jpg" alt="Meghalaya waterfalls" title="Visiting Meghalaya"  width="300" height="500" loading="lazy">
+                            <figcaption>Visiting Meghalaya</figcaption>
+                        </figure>
+                        
+                        <p>
+                            <address>Jail Road, Police Bazar,<br>Shillong, Meghalaya,<br> India 793001</address>
+                            <figure>
+                                <img src="/img/amit-jain-FYGEA9aezAw-unsplash.jpg" alt="Boat rowing in Meghalaya" title="Boat rowing in Meghalaya" width="500" height="300" loading="lazy">
+                                <figcaption>Boat rowing in Meghalaya</figcaption>
+                            </figure>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        
+        <hr>
+
+        <section id="don-ts">
+            <h3>What I don't want to do</h3>
+            <!--description list-->
+            <dl>
+                <!--description term-->
+                <dt>Waste Time</dt>
+                <!--description details-->
+                <dd>Not spending time on unproductive activities.</dd>
+                <dd>Not procrastinating on important tasks.</dd>
+            </dl>
+            <!-- World Wide Web Consortium: For validating markups-->
+            <!--
+            References: 
+            1. Absolute refernces
+            2. Relative references
+            3. Internal references (or shortcuts)
+            -->
+        </section>
+    </main>
 
     <hr>
 
-    <ul>
-        <li>
-            Download <a href="cool.png" download>HTML5 Favicon</a>
-        </li>
-    </ul>
-
-    <hr>
-
-    &lt; &lt; &lt; &copy; <a href="about.html">Aritra Ghosh</a> &gt; &gt; &gt;
-    <p>
-        <a href="#">Back To Top</a>
-    </p>
+    <footer>
+        <p>&lt; &lt; &lt; &copy; <a href="about.html">Aritra Ghosh</a> &gt; &gt; &gt;</p>
+        <p><a href="#">Back To Top</a></p>
+    </footer>
 </body>
 </html>
