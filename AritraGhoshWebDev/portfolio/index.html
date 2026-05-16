@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div>
+        <div id="left">
             <h3>Content</h3>
             <nav>
                 <details>
@@ -46,7 +46,7 @@
                 </details>
             </nav>
         </div>
-        <div>
+        <div id="middle">
             <head>
                 <h1>Welcome, I'm Aritra Ghosh</h1>
             </head>
@@ -67,27 +67,255 @@
                     <br>
                     <section id="hobbies">
                         <h3>My Hobbies</h3>
-                        <p>I'm someone with a wide-ranging plethora of interests that keep me constantly curious and engaged. I love immersing myself in different worlds, whether that means getting lost in a good book, marathoning the latest anime, or catching up on movies and discovering new music. Gaming is also a huge part of how I unwind</p>
+                        <p>I'm someone with a wide-ranging plethora of interests that keep me constantly curious and engaged. I love immersing myself in different worlds, whether that means getting lost in a good book, marathoning the latest anime, or catching up on movies and discovering new music. Gaming is also a huge part of how I unwind.</p>
                         <section id="books">
                             <h4>Top 5 Books Of This Month</h4>
+                            <div class="favourite books">
+                                <figure>
+                                    <img src="img/books/shakchunni_coverpage.jpg" alt="Shakchunni" title="Bengali folklore blends with sinister family secrets." width="200px" height="300px">
+                                    <figcaption>Shakchunni</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="/img/books/Front-Cover-Why-I-am-an-atheist.png" alt="Why I Am An Atheist" title="Bhagat Singh logically defends his secular, rational beliefs." width="200px" height="300px">
+                                    <figcaption>Why I Am An Atheist</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/books/The_silent_patient_coverpage.jpg" alt="The Silent Patient" title="A therapist obsesses over a mute murderer." width="200px" height="300px">
+                                    <figcaption>The Silent Patient</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/books/The_shining_coverpage.jpg" alt="The Shining" title="Isolation drives an alcoholic caretaker to madness." width="200px" height="300px">
+                                    <figcaption>The Shining</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/books/The_creeper_coverpage.jpg" alt="The Creeper" title="Researchers face an ancient, deadly Irish village curse." width="200px" height="300px">
+                                    <figcaption>The Creeper</figcaption>
+                                </figure>
+                            </div>
                         </section>
                         <section id="movies">
                             <h4>Top 5 Movies Of This Month</h4>
+                            <div class="favourite movies">
+                                <figure>
+                                    <img src="img/movies/sinners.jpg" alt="Sinners" title="Twin brothers confront a supernatural evil in 1930s Mississippi." width="200px" height="300px">
+                                    <figcaption>Sinners</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/movies/spiderverse_final.jpg" alt="Spider-Man: Into The Spider-Verse" title="A Brooklyn teen joins alternate-universe heroes to save reality." width="200px" height="300px">
+                                    <figcaption>Spider-Man: Into The Spider-Verse</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/movies/dhurandhar.jpg" alt="Dhurandhar" title="An undercover agent wages a brutal personal war in Lyari." width="200px" height="300px">
+                                    <figcaption>Dhurandhar</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/movies/interstellar.jpg" alt="Interstellar" title="Astronauts navigate a wormhole seeking a new home for humanity." width="200px" height="300px">
+                                    <figcaption>Interstellar</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/movies/shawshank_redemption.jpeg" alt="Shawshank Redemption" title="A wrongly convicted banker slowly builds hope and ultimate freedom." width="200px" height="300px">
+                                    <figcaption>Shawshank Redemption</figcaption>
+                                </figure>
+                            </div>
                         </section>
                         <section id="music">
                             <h4>Top 5 Music/Songs Of This Month</h4>
+                            <div class="favourite music">
+                                <figure>
+                                    <img src="img/music/i_aint_worried.jpg" alt="I Ain't Worried" title="OneRepublic" width="200px" height="200px">
+                                    <figcaption>I Ain't Worried</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/music/memory_reboot.jpg" alt="Memory Reboot" title="VØJ & Narvent" width="200px" height="200px">
+                                    <figcaption>Memory Reboot</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/music/om.jpg" alt="Om" title="Brodha V" width="200px" height="200px">
+                                    <figcaption>Om</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/music/rhinestone_eyes.jpg" alt="Rhinestone Eyes" title="Gorillaz" width="200px" height="200px">
+                                    <figcaption>Rhinestone Eyes</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/music/kilby_girl.jpg" alt="Kilby Girl" title="The Backseat Lovers" width="200px" height="200px">
+                                    <figcaption>Kilby Girl</figcaption>
+                                </figure>
+                            </div>
                         </section>
                         <section id="anime">
-                            <h4>Top 5 Games Of This Month</h4>
+                            <h4>Top 5 Anime Of This Month</h4>
+                            <div class="favourite anime">
+                                <figure>
+                                    <img src="img/anime/one_piece.jpg" alt="One Piece" title="A rubber boy sails dangerous seas to become the Pirate King." width="200px" height="300px">
+                                    <figcaption>One Piece</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/anime/naruto.jpg" alt="Naruto" title="An outcast ninja strives for ultimate recognition and the Hokage title." width="200px" height="300px">
+                                    <figcaption>Naruto</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/anime/haikyuu.jpg" alt="Haikyuu!" title="Underdog rivals unite to revive their high school volleyball club." width="200px" height="300px">
+                                    <figcaption>Haikyuu!</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/anime/solo_leveling.jpg" alt="Solo Leveling" title="The world's weakest hunter gains a unique system to endlessly level up." width="200px" height="300px">
+                                    <figcaption>Solo Leveling</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/anime/re_zero.jpg" alt="Re: Zero" title="A teenager navigates a brutal fantasy world using time-looping resurrection." width="200px" height="300px">
+                                    <figcaption>Re: Zero</figcaption>
+                                </figure>
+                            </div>
                         </section>
                         <section id="games">
                             <h4>Top 5 Games Of This Month</h4>
+                            <div class="favourite games">
+                                <figure>
+                                    <img src="img/games/metro.jpg" alt="Metro Exodus" title="Survivors of a nuclear war navigate mutated, faction-torn Russian subway tunnels." width="200px" height="300px">
+                                    <figcaption>Metro <em>Series</em></figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/games/last_of_us.jpg" alt="Last Of Us 2" title="A smuggler escorts an immune girl across a brutal, infected America." width="200px" height="300px">
+                                    <figcaption>Last Of Us <em>Series</em></figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/games/ghost_of_tsushima.jpg" alt="Ghost Of Tsushima" title="A samurai abandons strict tradition, using stealth to repel a Mongol invasion." width="200px" height="300px">
+                                    <figcaption>Ghost Of Tsushima</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/games/resident_evil.jpg" alt="Resident Evil 2" title="Special agents battle sinister bioweapons, evil corporations, and relentless zombie outbreaks." width="200px" height="300px">
+                                    <figcaption>Resident Evil <em>Series</em></figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/games/little_nightmares.jpg" alt="Little Nightmares 2" title="Tiny children use stealth and puzzle-solving to escape grotesque, terrifying giants." width="200px" height="300px">
+                                    <figcaption>Little Nightmares <em>Series</em></figcaption>
+                                </figure>
+                            </div>
                         </section>
                     </section>
                 </article>
+                <br><br>
+                <article id="edu">
+                    <h2>My Education</h2>
+                    <hr>
+                    <section id="mat">
+                        <h3>Matriculation</h3>
+                        <figure>
+                            <img src="img/education/carmel_school.jpg" alt="Carmel School, Sarangabad" title="Christian Minority School administered by the sisters of the congregation of the mother of Carmel (C.M.C) an Indian Christian education body of wide and long experience." width="512px" height="200px">
+                            <figcaption>Carmel School, Sarangabad</figcaption>
+                        </figure>
+                        <div>
+                            <h4>Academic Curriculum</h4>
+                            <ul>
+                                <li>English Grammar</li>
+                                <li>English Literature</li>
+                                <li>History</li>
+                                <li>Geography</li>
+                                <li>Bengali</li>
+                                <li>Mathematics</li>
+                                <li>Physics</li>
+                                <li>Chemistry</li>
+                                <li>Biology</li>
+                                <li>Computer</li>
+                                <li><abbr title="Socially Useful Productive Work">SUPW</abbr></li>
+                                <li>Moral Science</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Co-Curriculum</h4>
+                            <ul>
+                                <li>Karate</li>
+                                <li>Basketball</li>
+                                <li>Football</li>
+                                <li>Acting</li>
+                                <li>Singing</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="hs">
+                        <h3>Higher Secondary</h3>
+                        <figure>
+                            <img src="img/education/carmel_school.jpg" alt="Carmel School, Sarangabad" title="Christian Minority School administered by the sisters of the congregation of the mother of Carmel (C.M.C) an Indian Christian education body of wide and long experience." width="512px" height="200px">
+                            <figcaption>Carmel School, Sarangabad</figcaption>
+                        </figure>
+                        <div>
+                            <h4>Academic Curriculum</h4>
+                            <ul>
+                                <li>English Grammar</li>
+                                <li>English Literature</li>
+                                <li>Bengali</li>
+                                <li>Mathematics</li>
+                                <li>Physics</li>
+                                <li>Chemistry</li>
+                                <li>Computer Science</li>
+                                <li><abbr title="Socially Useful Productive Work">SUPW</abbr></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Co-Curriculum</h4>
+                            <ul>
+                                <li>Basketball</li>
+                                <li>Football</li>
+                                <li>Acting</li>
+                                <li>Singing</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="grad">
+                        <h3>Bachelor Of Technology</h3>
+                        <figure>
+                            <img src="img/education/vit-university-vellore.jpg" alt="Vellore Institure Of Technology, Vellore" title="A place to learn, A chance to grow" width="600px" height="200px">
+                            <figcaption><abbr title="Vellore Institure Of Technology">VIT</abbr>, Vellore</figcaption>
+                        </figure>
+                        <div>
+                            <h4>Academic Curriculum</h4>
+                            <ul>
+                                <li>Python</li>
+                                <li>Object Oriented Programming</li>
+                                <li>Data Structures and Algorithms</li>
+                                <li>Microprocessors and Microcontrollers</li>
+                                <li>Discrete Mathematics</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Co-Curriculum</h4>
+                            <ul>
+                                <li>Badminton</li>
+                                <li>Cycling</li>
+                            </ul>
+                        </div>
+                    </section>
+                </article>
+                <br><br>
+                <article id="pursuit">
+                    <h2>My Current Pursuit</h2>
+                    <hr>
+                    <section id="robo">
+                        <h3>RoboVITics</h3>
+                        <figure>
+                            <img src="img/pursuit/robovitics.png" alt="RoboVITics Club" title="RoboVITics is the official robotics club of Vellore Institute of Technology, Vellore." width="300px" height="200px">
+                            <figcaption>RoboVITics</figcaption>
+                        </figure>
+                        <p>As a Junior Core in Web Development at RoboVITics, I have the exciting opportunity to bridge the gap between cutting-edge hardware innovation and seamless digital experiences. Being part of such a premier technical community at VIT allows me to leverage my expertise in modern web stacks, including MERN, to build and maintain the platforms that showcase our engineering achievements. It is an incredible environment rooted in originality and perseverance, and I take pride in ensuring our club's online presence is as robust, dynamic, and forward-thinking as the robots we engineer.</p>
+                    </section>
+                    <section id="orcus">
+                        <h3>Team Orcus</h3>
+                        <figure>
+                            <img src="img/pursuit/orcus.png" alt="Team Orcus" title="Team Orcus is the combat robotics division of RoboVITics." width="200px" height="200px">
+                            <figcaption>Team Orcus</figcaption>
+                        </figure>
+                        <p>As a Junior Core in the Electrical Department for Team Orcus, my primary focus is on the intricate hardware and power systems that bring our combat robots to life. My role involves hands-on circuit design, component integration, and embedded systems programming. From drafting precise schematics and component models in Autodesk Fusion 360 to ensuring reliable power distribution during intense arena combat, I am responsible for the electrical integrity and responsive control systems of our bots, translating complex hardware challenges into robust, battle-ready solutions.</p>
+                    </section>
+                </article>
+                <br><br>
+                <footer>
+                    <hr>
+                    <p><a href="/">Back To Top</a></p>
+                    <p>&copy; 2024 Aritra Ghosh. All rights reserved.</p>
+                </footer>
             </main>
         </div>
-        
-        
+        <div id="right"></div>
     </body>
 </html>
