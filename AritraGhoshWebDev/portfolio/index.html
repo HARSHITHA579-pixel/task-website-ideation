@@ -8,17 +8,20 @@
         <title>Aritra Ghosh | Home</title>
         <link rel="icon" href="img/portfolio.png" type="image/x-icon">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Bungee&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="left">
             <h3>Content</h3>
-            <nav>
-                <details>
+            <nav id="content-nav">
+                <details id="c-about">
                     <summary>
                         <a href="#about">About Me</a>
                     </summary>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#intro">Introduction</a></p>
-                    <details>
+                    <details id="c-hobbies">
                         <summary>
                             &nbsp;&nbsp;<a href="#hobbies">Hobbies</a>
                         </summary>
@@ -29,7 +32,8 @@
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#games">Games</a></p>
                     </details>
                 </details>
-                <details>
+                <br>
+                <details id="c-edu">
                     <summary>
                         <a href="#edu">Education</a>
                     </summary>
@@ -37,7 +41,8 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#hs">Higher Secondary</a></p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#grad">Graduation</a></p>
                 </details>
-                <details>
+                <br>
+                <details id="c-pursuit">
                     <summary>
                         <a href="#pursuit">Current Pursuit</a>
                     </summary>
@@ -48,18 +53,18 @@
         </div>
         <div id="middle">
             <head>
-                <h1>Welcome, I'm Aritra Ghosh</h1>
+                <h1>Welcome, I'm<br> Aritra Ghosh</h1>
             </head>
-            <nav>
-                <a href="/">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact Me</a>
+            <br><br>
+            <nav id="primary-nav">
+                <a href="/"><b>Home</b></a>
+                <a href="projects.html"><b>Projects</b></a>
+                <a href="contact.html"><b>Contact Me</b></a>
             </nav>
             <br><br>
             <main>
                 <article id="about">
                     <h2>About Me</h2>
-                    <hr>
                     <section id="intro">
                         <h3>Introduction</h3>
                         <p>Hi, I'm Aritra. Born in <time datetime="2005">2005</time>. I'm from <em>West Bengal, India</em>. Currently, I'm in <em>Vellore, Tamil Nadu</em> for my bachelors degree. At my core, I'm someone who deeply values <strong>connection and community</strong>. The people in my life mean the world to me — especially my mother, who is my absolute best friend and biggest support system. I love tackling life alongside a close-knit group of friends, whether we're collaborating on a creative project or just hanging out. I've always got a curious mind, so in my free time, you'll usually find me learning Spanish, keeping up with the stock market, or unwinding by managing Minecraft servers. There's always more to it.</p>
@@ -198,39 +203,40 @@
                 <br><br>
                 <article id="edu">
                     <h2>My Education</h2>
-                    <hr>
                     <section id="mat">
                         <h3>Matriculation</h3>
                         <figure>
                             <img src="img/education/carmel_school.jpg" alt="Carmel School, Sarangabad" title="Christian Minority School administered by the sisters of the congregation of the mother of Carmel (C.M.C) an Indian Christian education body of wide and long experience." width="512px" height="200px">
                             <figcaption>Carmel School, Sarangabad</figcaption>
                         </figure>
-                        <div>
-                            <h4>Academic Curriculum</h4>
-                            <ul>
-                                <li>English Grammar</li>
-                                <li>English Literature</li>
-                                <li>History</li>
-                                <li>Geography</li>
-                                <li>Bengali</li>
-                                <li>Mathematics</li>
-                                <li>Physics</li>
-                                <li>Chemistry</li>
-                                <li>Biology</li>
-                                <li>Computer</li>
-                                <li><abbr title="Socially Useful Productive Work">SUPW</abbr></li>
-                                <li>Moral Science</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Co-Curriculum</h4>
-                            <ul>
-                                <li>Karate</li>
-                                <li>Basketball</li>
-                                <li>Football</li>
-                                <li>Acting</li>
-                                <li>Singing</li>
-                            </ul>
+                        <div class="curricular">
+                            <div class="academic">
+                                <h4>Academic Curriculum</h4>
+                                <ul>
+                                    <li>English Grammar</li>
+                                    <li>English Literature</li>
+                                    <li>History</li>
+                                    <li>Geography</li>
+                                    <li>Bengali</li>
+                                    <li>Mathematics</li>
+                                    <li>Physics</li>
+                                    <li>Chemistry</li>
+                                    <li>Biology</li>
+                                    <li>Computer</li>
+                                    <li><abbr title="Socially Useful Productive Work">SUPW</abbr></li>
+                                    <li>Moral Science</li>
+                                </ul>
+                            </div>
+                            <div class="nonacademic">
+                                <h4>Co-Curriculum</h4>
+                                <ul>
+                                    <li>Karate</li>
+                                    <li>Basketball</li>
+                                    <li>Football</li>
+                                    <li>Acting</li>
+                                    <li>Singing</li>
+                                </ul>
+                            </div>
                         </div>
                     </section>
                     <section id="hs">
@@ -239,27 +245,29 @@
                             <img src="img/education/carmel_school.jpg" alt="Carmel School, Sarangabad" title="Christian Minority School administered by the sisters of the congregation of the mother of Carmel (C.M.C) an Indian Christian education body of wide and long experience." width="512px" height="200px">
                             <figcaption>Carmel School, Sarangabad</figcaption>
                         </figure>
-                        <div>
-                            <h4>Academic Curriculum</h4>
-                            <ul>
-                                <li>English Grammar</li>
-                                <li>English Literature</li>
-                                <li>Bengali</li>
-                                <li>Mathematics</li>
-                                <li>Physics</li>
-                                <li>Chemistry</li>
-                                <li>Computer Science</li>
-                                <li><abbr title="Socially Useful Productive Work">SUPW</abbr></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Co-Curriculum</h4>
-                            <ul>
-                                <li>Basketball</li>
-                                <li>Football</li>
-                                <li>Acting</li>
-                                <li>Singing</li>
-                            </ul>
+                        <div class="curricular">
+                            <div class="academic">
+                                <h4>Academic Curriculum</h4>
+                                <ul>
+                                    <li>English Grammar</li>
+                                    <li>English Literature</li>
+                                    <li>Bengali</li>
+                                    <li>Mathematics</li>
+                                    <li>Physics</li>
+                                    <li>Chemistry</li>
+                                    <li>Computer Science</li>
+                                    <li><abbr title="Socially Useful Productive Work">SUPW</abbr></li>
+                                </ul>
+                            </div>
+                            <div class="nonacademic">
+                                <h4>Co-Curriculum</h4>
+                                <ul>
+                                    <li>Basketball</li>
+                                    <li>Football</li>
+                                    <li>Acting</li>
+                                    <li>Singing</li>
+                                </ul>
+                            </div>
                         </div>
                     </section>
                     <section id="grad">
@@ -268,29 +276,30 @@
                             <img src="img/education/vit-university-vellore.jpg" alt="Vellore Institure Of Technology, Vellore" title="A place to learn, A chance to grow" width="600px" height="200px">
                             <figcaption><abbr title="Vellore Institure Of Technology">VIT</abbr>, Vellore</figcaption>
                         </figure>
-                        <div>
-                            <h4>Academic Curriculum</h4>
-                            <ul>
-                                <li>Python</li>
-                                <li>Object Oriented Programming</li>
-                                <li>Data Structures and Algorithms</li>
-                                <li>Microprocessors and Microcontrollers</li>
-                                <li>Discrete Mathematics</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Co-Curriculum</h4>
-                            <ul>
-                                <li>Badminton</li>
-                                <li>Cycling</li>
-                            </ul>
+                        <div class="curricular">
+                            <div class="academic">
+                                <h4>Academic Curriculum</h4>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>Object Oriented Programming</li>
+                                    <li>Data Structures and Algorithms</li>
+                                    <li>Microprocessors and Microcontrollers</li>
+                                    <li>Discrete Mathematics</li>
+                                </ul>
+                            </div>
+                            <div class="nonacademic">
+                                <h4>Co-Curriculum</h4>
+                                <ul>
+                                    <li>Badminton</li>
+                                    <li>Cycling</li>
+                                </ul>
+                            </div>
                         </div>
                     </section>
                 </article>
                 <br><br>
                 <article id="pursuit">
                     <h2>My Current Pursuit</h2>
-                    <hr>
                     <section id="robo">
                         <h3>RoboVITics</h3>
                         <figure>
@@ -310,7 +319,6 @@
                 </article>
                 <br><br>
                 <footer>
-                    <hr>
                     <p><a href="/">Back To Top</a></p>
                     <p>&copy; 2024 Aritra Ghosh. All rights reserved.</p>
                 </footer>

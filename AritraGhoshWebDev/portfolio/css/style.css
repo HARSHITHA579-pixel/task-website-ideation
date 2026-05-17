@@ -1,9 +1,10 @@
 * {
     text-decoration: none;
     box-sizing: border-box;
-    background-color: #FFE600;
+    font-family: monospace;
 }
 body {
+    background-color: #FFE600;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -12,27 +13,202 @@ body {
     width: 100%;
     height: 100vh;
 }
+h1, h2, h3, h4, figcaption, figcaption abbr {
+    font-family: 'Bungee', sans-serif;
+    font-weight: 400;
+}
 #left, #middle, #right {
     padding: 10px 20px;
     margin: 0px auto;
 }
-#left {
+#left, #right {
     width: 20%;
-    height: 100vh;
+    height: auto;
+    background-color: #00FF85;
+    border: 5px solid black;
 }
+details {
+    padding: 10px 20px;
+    border: 2px solid grey;
+}
+#c-about {
+    background-color: #E0F2FE;
+}
+#c-hobbies {
+    background-color: #D1FAE5;
+}
+#c-edu {
+    background-color: #FFEDD5;
+}
+#c-pursuit {
+    background-color: #FCE7F3;
+}
+
 #middle {
     width: 55%;
     height: auto;
     border-left: 3px solid black;
     border-right: 3px solid black;
 }
-#right {
-    width: 20%;
-    height: 100vh;
+h1 {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF3366;
+    border: 5px solid black;
+    text-align: center;
+    font-size: 50px;
+    box-shadow: 10px 10px black;
 }
-.favourite {
+#primary-nav {
+    width: 90%;
+    height: 7vh;
+    margin: 0px auto;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    background-color: #2D5BFF;
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+a {
+    color: black;
+}
+a[href="projects.html"], a[href="/"], a[href="contact.html"] {
+    background-color: white;
+    padding: 10px 20px;
+    border: 3px solid black;
+}
+a[href="projects.html"]:hover, a[href="/"]:hover, a[href="contact.html"]:hover {
+    background-color: #FFE600;
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+#about, #edu, #pursuit {
+    width: 95%;
+    padding: 10px 20px;
+    margin: 0px auto;
+    background-color: white;
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+h2 {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #FF3B30;
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+h3 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #C4B5FD;
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+p {
+    width: 100%;
+    padding: 24px 32px;
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #00E5FF;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+}
+.favourite {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:nowrap;
+    overflow: auto;
+    border: 2px solid rgb(63, 62, 62);
+    background-color: #D1D5DB;
+}
+#books, #movies, #music, #anime, #games {
+    width: 100%;
+    padding: 10px 20px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+}
+#books {
+    background-color: #FF007F;
+}
+#movies {
+    background-color: #3300FF;
+}
+#music {
+    background-color: #FF4500;
+}
+#anime {
+    background-color: #8A2BE2;
+}
+#games {
+    background-color: #FF00FF;
+}
+figcaption {
+    padding: 10px 20px;
+    background-color: #00FFFF;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    text-align: center;
+}
+#intro, #hobbies, #mat, #hs, #grad, #robo, #orcus {
+    width: 100%;
+    padding: 10px 20px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    overflow: hidden;
+}
+#intro, #mat {
+    background-color: #D800FF;
+}
+#robo, #hs {
+    background-color: #FF5500;
+}
+#orcus, #hobbies, #grad {
+    background-color: #6600FF;
+}
+.curricular {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+figure {
+    padding: 10px;
+    border: 2px solid black;
+}
+#edu figure, #pursuit figure {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.academic, .nonacademic {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #D1D5DB;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+}
+.academic h4, .nonacademic h4 {
+    border-bottom: 2px solid black;
+}
+footer {
+    border-top: 5px solid black;
+}
+footer p {
+    text-align: center;
+    background-color: #8A2BE2;
+}
+#right {
+    background-color: cornflowerblue;
 }
