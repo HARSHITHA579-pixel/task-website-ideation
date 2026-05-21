@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+}
+/* input, button {
+    font: inherit;
+} */
+
+h1, h2, h3 {
+    font-family: "Playwrite GB S Guides", cursive;
+}
+
+p {
+    text-decoration: line-through;
+    text-transform: capitalize;
+    text-align: justify;
+    text-indent: 4em;
+    line-height: 1.5;
+    /* letter-spacing: 0.1em; */
+    /* word-spacing: 1em; */
+    font-weight: 600;
+    font-style: italic;
+}

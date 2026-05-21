@@ -1,0 +1,28 @@
+/*universal selector*/
+* {
+    font-family: monospace;
+}
+/* element selector */
+body {
+    font-size: 22px;
+}
+p {
+    color: purple;
+}
+h1, h2 {
+    color: blue;
+}
+
+/*class selector*/
+.gray {
+    color: gray;
+}
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+/*id selector*/
+#second {
+    font-style: italic;
+}
