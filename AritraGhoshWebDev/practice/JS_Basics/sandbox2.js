@@ -41,4 +41,25 @@ let age = null;
 console.log(age, age+3, 'the age is ${age}');
 
 
+// Boolean
+age = 25;
+console.log(age == 25);
+console.log(age == 20);
+console.log(age > 20);
+console.log(age < 30);
+console.log(age != 44);
+console.log(age <= 25);
+console.log(age >= 25);
+
+// loose comparison (different types can still be equal)
+let name = 'shaun';
+console.log(name == 'shaun');
+console.log(name == 'Shaun'); // case-sensitive
+console.log(name > 'crystal'); // s > c
+console.log(age == '25');
+
+// strict comparison (different types cannot be equal)
+console.log(age === 25);
+console.log(age === '25');
+console.log(age !== '25');
 
