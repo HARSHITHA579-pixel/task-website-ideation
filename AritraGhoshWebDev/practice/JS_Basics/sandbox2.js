@@ -63,3 +63,24 @@ console.log(age === 25);
 console.log(age === '25');
 console.log(age !== '25');
 
+
+// Type Conversion
+let score = '100';
+score = Number(score);
+console.log(score+1);
+console.log(typeof score);
+
+let result = String(1000);
+console.log(result, typeof result);
+
+result = Boolean(100);
+console.log(result, typeof result);
+
+result = Boolean(0);
+console.log(result, typeof result);
+
+result = Boolean('0');
+console.log(result, typeof result);
+
+result = Boolean('');
+console.log(result, typeof result);
