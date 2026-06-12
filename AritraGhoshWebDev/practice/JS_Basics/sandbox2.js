@@ -34,11 +34,11 @@ console.log(result);
 
 // unintentional assignment of value
 let age;
-console.log(age, age+3, 'the age is ${age}');
+console.log(age, age+3, `the age is ${age}`);
 
 // intentional 
 let age = null;
-console.log(age, age+3, 'the age is ${age}');
+console.log(age, age+3, `the age is ${age}`);
 
 
 // Boolean
