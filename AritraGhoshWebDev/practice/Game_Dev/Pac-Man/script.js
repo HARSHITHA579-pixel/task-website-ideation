@@ -56,6 +56,9 @@ const ghosts = new Set();
 let pacman;
 
 const directions = ['U', 'D', 'L', 'R'];
+let score = 0;
+let lives = 3;
+let gameOver = false;
 
 // when our page loads
 window.onload = function() {
@@ -162,6 +165,9 @@ function loadMap() {
 }
 
 function update() {
+    if(gameOver) {
+        return;
+    }
     move();
     draw();
     setTimeout(update, 50);
@@ -187,6 +193,16 @@ function draw() {
     foods.forEach(food => {
         context.fillRect(food.x, food.y, food.width, food.height);
     });
+
+    //score
+    context.fillStyle = "white";
+    context.font = "14px sans-serif";
+    if(gameOver) {
+        context.fillText(`Game Over: ${score}`, tileSize/2, tileSize/2);
+    }
+    else {
+        context.fillText(`x${lives} ${score}`, tileSize/2, tileSize/2);
+    }
 }
 
 function move() {
@@ -203,6 +219,15 @@ function move() {
     }
 
     ghosts.forEach(ghost => {
+        if(collision(ghost, pacman)) {
+            lives -= 1;
+            if(lives == 0) {
+                gameOver = true;
+                return;
+            }
+            resetPositions();
+        }
+
         if(ghost.y == tileSize*9 && ghost.direction != 'U' && ghost.direction != 'D') {
             ghost.updateDirection('U');
         }
@@ -219,9 +244,35 @@ function move() {
             }
         });
     });
+
+    // check food collision
+    let foodEaten = null;
+    for(let food of foods.values()) {
+        if(collision(pacman, food)) {
+            foodEaten = food;
+            score += 10;
+            break;
+        }
+    }
+    foods.delete(foodEaten);
+
+    // next level
+    if(foods.size == 0) {
+        loadMap();
+        resetPositions();
+    }
 }
 
 function movePacman(e) {
+    if(gameOver) {
+        loadMap();
+        resetPositions();
+        lives = 3;
+        score = 0;
+        gameOver = false;
+        update(); // restart the game loop
+        return;
+    }
     switch(e.code) {
         case "ArrowUp":
         case "KeyW": pacman.updateDirection('U'); break;
@@ -244,6 +295,18 @@ function movePacman(e) {
 
 function collision(a, b) {
     return a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y;
+}
+
+function resetPositions() {
+    pacman.reset();
+    pacman.image = pacmanRightImg;
+    pacman.velocityX = 0;
+    pacman.velocityY = 0;
+    ghosts.forEach(ghost => {
+        ghost.reset();
+        const newDirection = directions[Math.floor(Math.random()*4)];
+        ghost.updateDirection(newDirection);
+    });
 }
 
 class Block {
@@ -303,5 +366,10 @@ class Block {
                 this.velocityY = 0;
             }
         }
+    }
+    
+    reset() {
+        this.x = this.startX;
+        this.y = this.startY;
     }
 }
