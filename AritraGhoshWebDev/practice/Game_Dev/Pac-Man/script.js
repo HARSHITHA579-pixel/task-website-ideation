@@ -22,22 +22,6 @@ let pacmanRightImg;
 let pacmanCloseImg;
 let wallImg;
 
-
-// when our page loads
-window.onload = function() {
-    board = document.getElementById("board");
-    board.height = boardHeight;
-    board.width = boardWidth;
-    context = board.getContext("2d") //used for drawing on the board
-
-    loadImages();
-    loadMap();
-    // console.log(walls.size);
-    // console.log(foods.size);
-    // console.log(ghosts.size);
-    update();
-    document.addEventListener("keydown", movePacman);
-}
 //X = wall, O = skip, P = pac man, ' ' = food
 //Ghosts: b = blue, o = orange, p = pink, r = red
 const tileMap = [
@@ -70,6 +54,28 @@ const walls = new Set();
 const foods = new Set();
 const ghosts = new Set();
 let pacman;
+
+const directions = ['U', 'D', 'L', 'R'];
+
+// when our page loads
+window.onload = function() {
+    board = document.getElementById("board");
+    board.height = boardHeight;
+    board.width = boardWidth;
+    context = board.getContext("2d") //used for drawing on the board
+
+    loadImages();
+    loadMap();
+    // console.log(walls.size);
+    // console.log(foods.size);
+    // console.log(ghosts.size);
+    ghosts.forEach(ghost => {
+        const newDirection = directions[Math.floor(Math.random()*4)]; // 0 - 3
+        ghost.updateDirection(newDirection);
+    });
+    update();
+    document.addEventListener("keydown", movePacman);
+}
 
 function loadImages() {
     wallImg = new Image();
@@ -195,6 +201,24 @@ function move() {
             break;
         }
     }
+
+    ghosts.forEach(ghost => {
+        if(ghost.y == tileSize*9 && ghost.direction != 'U' && ghost.direction != 'D') {
+            ghost.updateDirection('U');
+        }
+
+        ghost.x += ghost.velocityX;
+        ghost.y += ghost.velocityY;
+
+        walls.forEach(wall => {
+            if(collision(ghost, wall) || ghost.x <= 0 || ghost.x + ghost.width >= boardWidth) {
+                ghost.x -= ghost.velocityX;
+                ghost.y -= ghost.velocityY;
+                const newDirection = directions[Math.floor(Math.random()*4)];
+                ghost.updateDirection(newDirection);
+            }
+        });
+    });
 }
 
 function movePacman(e) {
