@@ -36,6 +36,7 @@ window.onload = function() {
     // console.log(foods.size);
     // console.log(ghosts.size);
     update();
+    document.addEventListener("keydown", movePacman);
 }
 //X = wall, O = skip, P = pac man, ' ' = food
 //Ghosts: b = blue, o = orange, p = pink, r = red
@@ -115,8 +116,7 @@ function loadMap() {
             const x = c*tileSize;
             const y = r*tileSize;
 
-            switch(tileMapChar)
-            {
+            switch(tileMapChar) {
                 case 'X': { // block wall
                     const wall = new Block(wallImg, x, y, tileSize, tileSize);
                     walls.add(wall);
@@ -143,7 +143,7 @@ function loadMap() {
                     break;
                 }
                 case 'P': { // pacman
-                    pacman = new Block(pacmanLeftImg, x, y, tileSize, tileSize);
+                    pacman = new Block(pacmanRightImg, x, y, tileSize, tileSize);
                     break;
                 }
                 case ' ': { // food
@@ -156,7 +156,7 @@ function loadMap() {
 }
 
 function update() {
-    
+    move();
     draw();
     setTimeout(update, 50);
     // setInterval(func, 50) - calls every 50ms, tiles can overlap from move&draw action causing issue
@@ -166,6 +166,7 @@ function update() {
 }
 
 function draw() {
+    context.clearRect(0, 0, board.width, board.height);
     context.drawImage(pacman.image, pacman.x, pacman.y, pacman.width, pacman.height);
 
     ghosts.forEach(ghost => {
@@ -182,6 +183,45 @@ function draw() {
     });
 }
 
+function move() {
+    pacman.x += pacman.velocityX;
+    pacman.y += pacman.velocityY;
+
+    // check for collisions
+    for(let wall of walls.values()) {
+        if(collision(pacman, wall)) {
+            pacman.x -= pacman.velocityX;
+            pacman.y -= pacman.velocityY;
+            break;
+        }
+    }
+}
+
+function movePacman(e) {
+    switch(e.code) {
+        case "ArrowUp":
+        case "KeyW": pacman.updateDirection('U'); break;
+        case "ArrowDown":
+        case "KeyS": pacman.updateDirection('D'); break;
+        case "ArrowLeft":
+        case "KeyA": pacman.updateDirection('L'); break;
+        case "ArrowRight":
+        case "KeyD": pacman.updateDirection('R'); 
+    }
+
+    // update pacman images
+    switch(pacman.direction) {
+        case 'U': pacman.image = pacmanUpImg; break;
+        case 'D': pacman.image = pacmanDownImg; break;
+        case 'L': pacman.image = pacmanLeftImg; break;
+        case 'R': pacman.image = pacmanRightImg; 
+    }
+}
+
+function collision(a, b) {
+    return a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y;
+}
+
 class Block {
     constructor(image, x, y, width, height) {
         this.image = image;
@@ -192,5 +232,52 @@ class Block {
 
         this.startX = x;
         this.startY = y;
+
+        this.direction = 'R';
+        this.velocityX = 0;
+        this.velocityY = 0;
+
+    }
+    
+    updateDirection(direction) {
+        const prevDirection = this.direction;
+        this.direction = direction;
+        this.updateVelocity();
+        this.x += this.velocityX;
+        this.y += this.velocityY;
+
+        for(let wall of walls.values()) {
+            if(collision(this, wall)) {
+                this.x -= this.velocityX;
+                this.y -= this.velocityY;
+                this.direction = prevDirection;
+                this.updateVelocity();
+                return;
+            }
+        }
+    }
+
+    updateVelocity() {
+        switch(this.direction) {
+            case 'U': {
+                this.velocityX = 0;
+                this.velocityY = -tileSize/4;
+                break;
+            }
+            case 'D': {
+                this.velocityX = 0;
+                this.velocityY = tileSize/4;
+                break;
+            }
+            case 'L': {
+                this.velocityX = -tileSize/4;
+                this.velocityY = 0;
+                break;
+            }
+            case 'R': {
+                this.velocityX = tileSize/4;
+                this.velocityY = 0;
+            }
+        }
     }
 }
