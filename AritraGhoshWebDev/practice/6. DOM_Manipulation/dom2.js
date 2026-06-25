@@ -58,3 +58,30 @@ console.log(birthday.getTime()); // useful for comparing dates
 window.onload = function() { // fires this function after all the HTML content is loaded - useful when the script link is at the head
     console.log("All contents are loaded.");
 };
+
+
+// Timers
+let message = document.getElementById("message");
+
+function showMessage() {
+    message.className = 'show';
+}
+// calls only once
+setTimeout(showMessage, 3000); // in ms
+
+// ------------------------------------------
+let change = document.getElementById("color-changer");
+let colors = ['red', 'blue', 'green', 'yellow', 'orange', 'violet', 'pink', 'cyan'];
+let count = 0;
+
+function changeColor() {
+    change.style.backgroundColor = colors[count%8];
+    count++;
+}
+// calls multiple times
+let timer = setInterval(changeColor, 3000);
+
+change.onclick = function() {
+    clearInterval(timer);
+    change.style.backgroundColor = 'black';
+}
