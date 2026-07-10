@@ -14,8 +14,11 @@ const request = new XMLHttpRequest(); // XML => older data format used much befo
 request.addEventListener('readystatechange', () => {
     // console.log(request, request.readyState);
 
-    if(request.readyState === 4) {
+    if(request.readyState === 4 && request.status === 200) { // 4 => request is complete, 200 => success
         console.log(request.responseText);
+    }
+    else if(request.readyState === 4) {
+        console.log('could not fetch the data');
     }
 
 
