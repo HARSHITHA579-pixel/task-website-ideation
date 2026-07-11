@@ -17,7 +17,10 @@ const getTodos = (callback) => {
 
         if(request.readyState === 4 && request.status === 200) { // 4 => request is complete, 200 => success
             // console.log(request.responseText);
-            callback(undefined, request.responseText);
+            // Takes JSON string and converts it into JS object
+            const data = JSON.parse(request.responseText);
+
+            callback(undefined, data); // convention - error, data
         }
         else if(request.readyState === 4) {
             // console.log('could not fetch the data');
@@ -29,7 +32,9 @@ const getTodos = (callback) => {
 
     // We don't know when the request is complete
     // https://jsonplaceholder.typicode.com/todos/ - gives fake data
-    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/'); // setting up the request --- type of request, end-point
+   /*  request.open('GET', 'https://jsonplaceholder.typicode.com/todos/'); // setting up the request --- type of request, end-point */
+
+    request.open('GET', 'todos.json'); 
     request.send();
 }
 
