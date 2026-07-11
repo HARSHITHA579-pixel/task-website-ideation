@@ -8,7 +8,7 @@
 // console.log(3);
 // console.log(4);
 // making it reusable
-const getTodos = (callback) => {
+const getTodos = (resource, callback) => {
     const request = new XMLHttpRequest(); // XML => older data format used much before JSON arrived
 
     // track the progress of request
@@ -34,7 +34,7 @@ const getTodos = (callback) => {
     // https://jsonplaceholder.typicode.com/todos/ - gives fake data
    /*  request.open('GET', 'https://jsonplaceholder.typicode.com/todos/'); // setting up the request --- type of request, end-point */
 
-    request.open('GET', 'todos.json'); 
+    request.open('GET', resource); 
     request.send();
 }
 
@@ -44,7 +44,7 @@ console.log(3);
 console.log(4);
 
 //convention - error, data
-getTodos((err, data) => {
+getTodos('todos/luigi.json', (err, data) => {
     console.log('callback fired');
     if(err) {
         console.log(err);
@@ -52,6 +52,26 @@ getTodos((err, data) => {
     else {
         console.log(data);
     }
+
+    getTodos('todos/mario.json', (err, data) => {
+        console.log('callback fired');
+        if(err) {
+            console.log(err);
+        }
+        else {
+            console.log(data);
+        }
+
+        getTodos('todos/shaun.json', (err, data) => {
+            console.log('callback fired');
+            if(err) {
+                console.log(err);
+            }
+            else {
+                console.log(data);
+            }
+        });
+    });
 });
 
 console.log(5);
