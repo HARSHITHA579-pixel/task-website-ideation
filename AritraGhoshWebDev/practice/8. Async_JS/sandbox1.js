@@ -23,7 +23,11 @@
 // this function returns a promise
 const getTodos = async () => {
     // await stalls JS until the promise is resolved and then assigns to response
-    const response = await fetch('todos/luigi.json');
+    const response = await fetch('todoos/luigi.json');
+
+    if(response.status !== 200) {
+        throw new Error('cannot fetch the data');
+    }
     // console.log(response);
     const data = await response.json();
     console.log(data);
@@ -38,7 +42,8 @@ console.log(2);
 console.log(3);
 console.log(4);
 getTodos()
-    .then(data => console.log('resolved: ', data));
+    .then(data => console.log('resolved: ', data))
+    .catch(err => console.log('rejected: ', err.message));
 console.log(5);
 console.log(6);
 console.log(7);
