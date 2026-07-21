@@ -1,6 +1,7 @@
 // sfc - stateless functional component
 
 import {useState} from 'react';
+import BlogList from './BLogList';
 
 const Home = () => {
 
@@ -34,12 +35,10 @@ const Home = () => {
             <button onClick={handleClick}>Click Me</button> */}
             {/* <button onClick={(e) => handleClickAgain('mario', e)}>Click Me Again</button> */}
 
-            {blogs.map((blog) => (
-                <div className="blog-preview" key={blog.id}>
-                    <h2>{blog.title}</h2>
-                    <p>Written by: {blog.author}</p>
-                </div>
-            ))}
+            {/* props to send data from parent component to child component -   1. makes it reusable, 
+                2. data can be used in home component if needed */}
+
+            <BlogList blogs={blogs} title="All Blogs!"/>
 
         </div>
     );
