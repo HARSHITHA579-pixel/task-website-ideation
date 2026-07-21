@@ -4,7 +4,7 @@ const Navbar = () => {
             <h1>The Dojo Blog</h1>
             <div className="links">
                 <a href="/">Home</a>
-                {/* JSX -> JS object */}
+                {/* Dynamic value -> JS object */}
                 <a href="/create" style={{
                     color: "white",
                     backgroundColor: '#f1356d',
