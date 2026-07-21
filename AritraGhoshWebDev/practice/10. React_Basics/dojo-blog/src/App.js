@@ -1,4 +1,3 @@
-import './App.css';
 import Navbar from './Navbar';
 import Home from './Home'
 
@@ -6,10 +5,10 @@ import Home from './Home'
 function App() {
   // this is not HTML, this is JSX. A compiler - Babel converts JSX to HTML. JSX is a syntax extension for JavaScript that looks similar to HTML. It allows you to write HTML-like code within your JavaScript code, making it easier to create and manage UI components in React.
 
-  const title = "Welcome to React";
+  // const title = "Welcome to React";
   // React converts everything into string to output it, except booleans & objects
-  const likes = 50;
-  const link = "https://www.google.com";
+  // const likes = 50;
+  // const link = "https://www.google.com";
 
   return (
     <div className="App">
