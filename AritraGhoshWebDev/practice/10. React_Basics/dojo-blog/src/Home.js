@@ -1,6 +1,6 @@
 // sfc - stateless functional component
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import BlogList from './BLogList';
 
 const Home = () => {
@@ -28,6 +28,13 @@ const Home = () => {
         {title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3}
     ]);
 
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id);
+        setBlogs(newBlogs);
+    }
+
+    useEffect(() => console.log('use effect ran'));
+
     return (
         <div className="home">
             {/* <h2>Homepage</h2>
@@ -38,7 +45,8 @@ const Home = () => {
             {/* props to send data from parent component to child component -   1. makes it reusable, 
                 2. data can be used in home component if needed */}
 
-            <BlogList blogs={blogs} title="All Blogs!"/>
+            <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete}/>
+            {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs!"/> */}
 
         </div>
     );
