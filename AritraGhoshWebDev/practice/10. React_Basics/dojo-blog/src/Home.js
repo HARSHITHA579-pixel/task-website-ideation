@@ -23,8 +23,9 @@ const Home = () => {
     // }
 
     const [blogs, setBlogs] = useState(null);
-
-    const [name, setName] = useState('mario');
+    const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
+    // const [name, setName] = useState('mario');
 
     // const handleDelete = (id) => {
     //     const newBlogs = blogs.filter(blog => blog.id !== id);
@@ -38,14 +39,27 @@ const Home = () => {
     // [] ensures useEffect runs once after 1st initial render
 
     useEffect(() => {
-        fetch('http://localhost:8000/blogs')
-        .then(res => {
-            return res.json();
-        })
-        .then((data) => {
-            // console.log(data);
-            setBlogs(data);
-        })
+        setTimeout(() => {
+            fetch('http://localhost:8000/blogs')
+                .then(res => {
+                    // console.log(res);
+                    if(!res.ok)
+                        throw Error('could not fetch the data');
+
+                    return res.json();
+                })
+                .then((data) => {
+                    // console.log(data);
+                    setBlogs(data);
+                    setIsPending(false);
+                    setError(null);
+                })
+                .catch(err => {
+                    // console.log(err.message);
+                    setIsPending(false);
+                    setError(err.message);
+                });
+        }, 1000);
     }, []);
 
     return (
@@ -59,11 +73,13 @@ const Home = () => {
                 2. data can be used in home component if needed */}
 
             {/* {blogs && <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete}/> } */}
-            {blogs && <BlogList blogs={blogs} title="All Blogs!"/> }
+            { error && <div>{error}</div> }
+            { isPending && <div>Loading...</div> }
+            { blogs && <BlogList blogs={blogs} title="All Blogs!"/> }
             {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs!"/> */}
 
-            <button onClick={(() => setName('luigi'))}>Change Name</button>
-            <p>{name}</p>
+            {/* <button onClick={(() => setName('luigi'))}>Change Name</button>
+            <p>{name}</p> */}
 
         </div>
     );
