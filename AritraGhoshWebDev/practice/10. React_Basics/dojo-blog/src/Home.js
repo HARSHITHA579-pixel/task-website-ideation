@@ -2,8 +2,12 @@
 
 import {useState, useEffect} from 'react';
 import BlogList from './BLogList';
+import useFetch from './useFetch';
 
 const Home = () => {
+
+    //we could use arrays for destructuring but using objects the order of variables doesn't matter
+    const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
 
     // let name = 'mario'; // the variable over here is not reactive
     // to make it reactive we use hook - useState
@@ -22,9 +26,9 @@ const Home = () => {
     //     setAge(30);
     // }
 
-    const [blogs, setBlogs] = useState(null);
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
+    // const [blogs, setBlogs] = useState(null);
+    // const [isPending, setIsPending] = useState(true);
+    // const [error, setError] = useState(null);
     // const [name, setName] = useState('mario');
 
     // const handleDelete = (id) => {
@@ -38,7 +42,7 @@ const Home = () => {
     // }, [name]);
     // [] ensures useEffect runs once after 1st initial render
 
-    useEffect(() => {
+    /* useEffect(() => {
         setTimeout(() => {
             fetch('http://localhost:8000/blogs')
                 .then(res => {
@@ -60,7 +64,7 @@ const Home = () => {
                     setError(err.message);
                 });
         }, 1000);
-    }, []);
+    }, []); */
 
     return (
         <div className="home">
