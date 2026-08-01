@@ -22,24 +22,31 @@ const Home = () => {
     //     setAge(30);
     // }
 
-    const [blogs, setBlogs] = useState([
-        {title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1},
-        {title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2},
-        {title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3}
-    ]);
+    const [blogs, setBlogs] = useState(null);
 
     const [name, setName] = useState('mario');
 
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id);
-        setBlogs(newBlogs);
-    }
+    // const handleDelete = (id) => {
+    //     const newBlogs = blogs.filter(blog => blog.id !== id);
+    //     setBlogs(newBlogs);
+    // }
+
+    // useEffect(() => {
+    //     console.log('use effect ran');
+    //     console.log(name);
+    // }, [name]);
+    // [] ensures useEffect runs once after 1st initial render
 
     useEffect(() => {
-        console.log('use effect ran');
-        console.log(name);
-    }, [name]);
-    // [] ensures useEffect runs once after 1st initial render
+        fetch('http://localhost:8000/blogs')
+        .then(res => {
+            return res.json();
+        })
+        .then((data) => {
+            // console.log(data);
+            setBlogs(data);
+        })
+    }, []);
 
     return (
         <div className="home">
@@ -51,7 +58,8 @@ const Home = () => {
             {/* props to send data from parent component to child component -   1. makes it reusable, 
                 2. data can be used in home component if needed */}
 
-            <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete}/>
+            {/* {blogs && <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete}/> } */}
+            {blogs && <BlogList blogs={blogs} title="All Blogs!"/> }
             {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs!"/> */}
 
             <button onClick={(() => setName('luigi'))}>Change Name</button>
