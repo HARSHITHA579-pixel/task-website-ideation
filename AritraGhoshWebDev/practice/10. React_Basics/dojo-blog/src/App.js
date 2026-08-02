@@ -2,6 +2,7 @@ import Navbar from './Navbar';
 import Home from './Home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Create from './Create';
+import BlogDetails from './BlogDetails';
 
 // first component rendered to the DOM & sits at the very top of our application - root component. All other components are nested inside this component
 function App() {
@@ -35,6 +36,9 @@ function App() {
               </Route>
               <Route path="/create">
                 <Create />
+              </Route>
+              <Route path="/blogs/:id">
+                <BlogDetails />
               </Route>
             </Switch>
 
